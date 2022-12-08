@@ -2,27 +2,29 @@ const classes = [];
 const ratings = ['the best', 'great', 'good', 'average', 'bad', 'terrible', 'the worst'];
 
 const createClass = (name, feature) => {
-  _name: name,
-  _feature: feature,
-  set name(str) {
-    if (typeof str === 'string') {
-      this._name = str;
-    } else {
-      return 'Class name must be a string';
+  return {
+    _name: name,
+    _feature: feature,
+    set name(str) {
+      if (typeof str === 'string') {
+        this._name = str;
+      } else {
+        return 'Class name must be a string';
+      }
+    },
+    get name() {
+      return this._name;
+    },
+    set feature(str) {
+      if (typeof str === 'string') {
+        this._feature = str;
+      } else {
+        return 'Class feature must be a string';
+      }
+    },
+    get feature() {
+      return this._feature;
     }
-  },
-  get name() {
-    return this._name;
-  },
-  set feature(str) {
-    if (typeof str === 'string') {
-      this._feature = str;
-    } else {
-      return 'Class feature must be a string';
-    }
-  },
-  get feature() {
-    return this._feature;
   }
 }
 
@@ -42,12 +44,11 @@ classes.push(createClass('Evoker', 'draconic powers'));
 
 const randomClass = classes[Math.floor(Math.random() * classes.length)];
 const randomRating = ratings[Math.floor(Math.random() * ratings.length)];
-<<<<<<< Updated upstream
-=======
 
 const formatMessage = () => {
-  console.log(`Your class is ${randomClass.name}!`);
+  console.log(`Your class is '${randomClass.name}'!`);
   console.log(`As a ${randomClass.name}, you are best known for your ${randomClass.feature}!`);
-  console.log(`In the upcoming raid tier, there is no doubt that ${randomClass.name}s will be ${randomRating}`)
+  console.log(`In the upcoming raid tier, there is no doubt that ${randomClass.name}s will be ${randomRating}.`)
 }
->>>>>>> Stashed changes
+
+formatMessage();
