@@ -42,3 +42,12 @@ classes.push(createClass('Evoker', 'draconic powers'));
 
 const randomClass = classes[Math.floor(Math.random() * classes.length)];
 const randomRating = ratings[Math.floor(Math.random() * ratings.length)];
+<<<<<<< Updated upstream
+=======
+
+const formatMessage = () => {
+  console.log(`Your class is ${randomClass.name}!`);
+  console.log(`As a ${randomClass.name}, you are best known for your ${randomClass.feature}!`);
+  console.log(`In the upcoming raid tier, there is no doubt that ${randomClass.name}s will be ${randomRating}`)
+}
+>>>>>>> Stashed changes
