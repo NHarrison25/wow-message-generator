@@ -1,6 +1,7 @@
 const classes = [];
 const ratings = ['the best', 'great', 'good', 'average', 'bad', 'terrible', 'the worst'];
 
+//Class factory function
 const createClass = (name, feature) => {
   return {
     _name: name,
@@ -28,6 +29,7 @@ const createClass = (name, feature) => {
   }
 }
 
+//Create base list of classes
 classes.push(createClass('Warrior', 'rage'));
 classes.push(createClass('Paladin', 'shield'));
 classes.push(createClass('Hunter', 'bow'));
@@ -42,9 +44,11 @@ classes.push(createClass('Demon Hunter', 'sacrifice'));
 classes.push(createClass('Death Knight', 'saronite armor and unending resolve'));
 classes.push(createClass('Evoker', 'draconic powers'));
 
+//Get random class and rating
 const randomClass = classes[Math.floor(Math.random() * classes.length)];
 const randomRating = ratings[Math.floor(Math.random() * ratings.length)];
 
+//Format output
 const formatMessage = () => {
   console.log(`Your class is '${randomClass.name}'!`);
   console.log(`As a ${randomClass.name}, you are best known for your ${randomClass.feature}!`);
