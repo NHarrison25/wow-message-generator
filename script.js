@@ -26,3 +26,17 @@ const createClass = (name, feature) => {
     return this._feature;
   }
 }
+
+classes.push(createClass('Warrior', 'rage'));
+classes.push(createClass('Paladin', 'shield'));
+classes.push(createClass('Hunter', 'bow'));
+classes.push(createClass('Rogue', 'daggers'));
+classes.push(createClass('Priest', 'faith in The Light (or The Void!)'));
+classes.push(createClass('Shaman', 'connection to the elements'));
+classes.push(createClass('Mage', 'knowledge of the arcane'));
+classes.push(createClass('Warlock', 'control over demons'));
+classes.push(createClass('Monk', 'skill in martial arts'));
+classes.push(createClass('Druid', 'connection with nature'));
+classes.push(createClass('Demon Hunter', 'sacrifice'));
+classes.push(createClass('Death Knight', 'saronite armor and unending resolve'));
+classes.push(createClass('Evoker', 'draconic powers'));
